@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+    <style>
+
+        body{
+            margin:0;
+            overflow-y: scroll;
+            background-color: white;
+            height: inherit;
+            width: inherit;
+        }
+        div{
+            display: block;
+        }
+        #main{
+            background-color: #f0f2f5;
+            height: 720px;
+        }
+        #div1{
+            padding-top: 72px;
+            padding-bottom: 120px;
+        }
+        #div2{
+            margin:0 auto;
+            padding: 20px 0;
+            position: relative;
+            width:980px;
+        }
+        #slogan{
+            background-color:#f0f2f5;
+            padding-right: 32px;
+            width: 580px;
+            display:inline-block;
+            box-sizing: border-box;
+        }
+        #slogan2{
+            padding: 112px 0 16px;
+        }
+        #fb_logo{
+            height:106px;
+            margin:-28px;
+        }
+        h2{
+            font-family:SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            font-weight:normal;
+            font-size:28px;
+            margin:0;
+            padding: 0 0 20px;
+            width: 500px;
+        }
+        #div3{
+            vertical-align: top;
+            float:right;
+            height: 456px;
+            width:396px;
+            position: relative;
+        }
+        #div4{
+            box-sizing: border-box;
+            width: 395px;
+            background-color: white;
+            border-radius: 6px;
+            text-align: center;
+            margin:40px 0 0;
+            padding-bottom: 24px;
+            padding-top: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+        }
+        .input_text{
+            border: 1px solid #dddfe2;
+            height: 22px;
+            line-height: 16px;
+            vertical-align: middle;
+            width: 330px;
+            font-size: 17px;
+            margin-top:6px;
+            margin-bottom: 6px;
+            padding: 14px 16px;
+            border-radius: 6px;
+        }
+        #login{
+            font-family: Helvetica, Arial, sans-serif;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: #1877f2;
+            line-height: 46px;
+            width: 364px;
+            border: none;
+            font-size: 20px;
+            color: white;
+            margin-top: 10px;
+        }
+        .input_text:focus{
+            border-color: #00A5D2;
+            caret-color: #00A5D2;
+        }
+        #div5{
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        #forgot_ps{
+            font-family: inherit;
+            color:#1877f2;
+            text-decoration: none;
+
+        }
+        #forgot_ps:before{
+            content:'';
+        }
+        #forgot_ps:hover{
+            text-decoration: underline;
+        }
+        #line {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 16px;
+        }
+        #create_acc{
+
+            line-height: 60px;
+            padding:14px 16px;
+            background-color: #42b72a;
+            color: white;
+            text-align: center;
+            font-size: 17px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        #create_acc:hover{
+            background-color: forestgreen;
+        }
+        #cr_page{
+            margin-top: 28px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: normal;
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+        }
+        #link{
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id = "main">
+        <div id = "div1">
+            <div id = "div2">
+                <div id =  "slogan">
+                    <div id = "slogan2">
+                        <img src = "https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" id = "fb_logo"  >
+                    </div>
+                    <h2 >Connect with friends and the world around you on Facebook.</h2>
+                </div>
+                <div id = "div3">
+                    <div id = "div4">
+
+                        <input type = "text" class = "input_text" placeholder = "Email or phone number" >
+                        <input type = "text" class = "input_text" placeholder = "Password">
+
+                        <button id = "login" value = "1" type = "submit" >Log In</button>
+                        <div id = "div5">
+                            <a id = "forgot_ps" href = "https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">
+                                Forgot password?
+                            </a>
+                        </div>
+                        <div id = "line"></div>
+                        <a id = "create_acc" role = "button" href = "https://www.facebook.com/">Create new account</a>
+                    </div>
+
+                    <div id = "cr_page">
+                        <a id = "link" href="https://www.facebook.com/pages/create/?ref_type=registration_form">Create a page</a> for a celebrity, brand or business.
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
