@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    <style>
+        body{
+            display: block;
+            margin: 0;
+        }
+        #div1{
+            display:flex;
+            position: relative;
+            z-index: 0;
+        }
+        #main_surf{
+            order: 4;
+            flex-grow: 1;
+            margin: auto;
+        }
+        #art_surf{
+            margin-top: 32px;
+            width: 100%;
+            padding-bottom: 32px;
+            justify-content: center;
+            font-size: 100%;
+            display: flex;
+        }
+        #div2{
+            flex-basis: 380.32px;
+            padding: 0;
+            height: 581.15px;
+            margin-bottom: 12px;
+            margin-right: 32px;
+            background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?__makehaste_cache_breaker=HOgRclNOosk");
+            background-size: 468.32px 634.15px;
+            background-position: -46px 0;
+            display: block;
+            align-self: center;
+
+        }
+        @keyframes fade {
+            0% { opacity: 0; }
+            11.11% { opacity: 1; }
+            33.33% { opacity: 1; }
+            44.44% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .fadein {
+            display: flex;
+            position:relative;
+            margin-top: 27px;
+            margin-left: 112px;
+        }
+         .imgs {
+             position: absolute;
+             height: 538.84px;
+             width:250px;
+             margin: 0;
+             padding: 0;
+             opacity: 0;
+             animation-name: fade;
+             animation-duration: 12s;
+             animation-iteration-count: infinite;
+             transition-duration: 2s;
+             transition-timing-function: ease-out;
+
+        }
+        .fadein img:nth-child(1) { animation-delay: 0s; }
+        .fadein img:nth-child(2) { animation-delay: 4s; }
+        .fadein img:nth-child(3) { animation-delay: 8s; }
+        .fadein img:nth-child(4) {animation-delay: 12s;}
+
+        #div3{
+            margin-top: 12px;
+            max-width: 350px;
+            width: 100%;
+
+        }
+        .div4{
+            font:inherit;
+            border: 1px solid rgb(219,219,219);
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        #label{
+            margin-bottom: 12px;
+            margin-top: 36px;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+            background-image: url("https://static.cdninstagram.com/rsrc.php/v3/ys/r/WBLlWbPOKZ9.png");
+            width: 174px;
+            height:50px;
+            background-size: 176px 264px;
+            align-self: center;
+        }
+        #login_tab{
+            width:100%;
+            max-width: 350px;
+            margin-bottom: 10px;
+            display: flex;
+
+        }
+        #div5{
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            margin-top:24px;
+            width: 100%;
+
+        }
+        .blocks{
+            display: block;
+            margin: 0 40px 6px;
+        }
+        .input_data{
+            border-radius: 2px;
+            position: relative;
+            padding: 9px 0 7px 8px;
+            width: 100%;
+            align-items: center;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: block;
+            background-color: rgb(250,250,250);
+            border: 1px solid rgb(219,219,219);
+        }
+
+        .login{
+            display: flex;
+            margin:8px 40px;
+            align-items: stretch;
+            justify-content: flex-start;
+            position: relative;
+            text-align: center;
+
+        }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: block;
+        }
+        #button1{
+            padding: 7px 16px!important;
+            margin: 0;
+            opacity: .7;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 8px;
+            height: 32px;
+            text-align: center;
+            background-color: rgb(0,149,246);
+            box-sizing: border-box;
+            border: none;
+            width:268.4px;
+            cursor:pointer;
+        }
+        .block1{
+
+            position: relative;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+
+        }
+        #or{
+            margin: 10px 40px 18px;
+            display: block;
+        }
+        #line{
+            display:flex;
+            flex-direction: row;
+        }
+        .line1{
+            flex-shrink: 1;
+            top:0.45em;
+            height:1px;
+            position:relative;
+            background-color:rgb(219,219,219);
+            display: block;
+            flex-grow: 1;
+        }
+        #word{
+            margin:0 18px 0 18px;
+            color:rgb(115,115,115);
+            font-size:.8125em;
+        }
+        #button2{
+            border: 0;
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            background-color: transparent;
+            text-align: center;
+            pointer-events: auto;
+            box-sizing: border-box;
+            width: 268.4px;
+
+        }
+        #fb_logo{
+            margin-right: 8px;
+            top: 3px;
+            position: relative;
+            background-position: -414px -259px;
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            background-image: url("https://static.cdninstagram.com/rsrc.php/v3/y5/r/TJztmXpWTmS.png");
+            background-repeat: no-repeat;
+            padding: 0;
+            vertical-align: baseline;
+        }
+        #fb_login{
+            border: 0;
+            font: inherit;
+            color:#385185;
+            font-weight: 550;
+            font-size: 14px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 18px;
+            position: relative;
+            cursor: pointer;
+
+        }
+        #forget{
+            color: rgb(0,55,107);
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 12px!important;
+            text-align: center!important;
+            text-decoration: none;
+        }
+        #word3{
+            color: rgb(0,0,0);
+            font-size: 14px;
+            margin: 15px;
+            text-align: center;
+        }
+        #sign-up{
+            text-decoration: none;
+            color: rgb(0,149,246);
+            font-weight: 600;
+        }
+        #div32{
+            display: flex;
+            flex-direction: column;
+        }
+        #get{
+            border: 0;
+            color: rgb(0,0,0);
+            font: inherit;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 10px 20px 10px 20px;
+            padding: 0;
+            text-align: center;
+            vertical-align: baseline;
+        }
+        #app{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 10px 0 10px 0;
+        }
+        #google{
+            margin-right: 8px;
+        }
+        .pic{
+            height: 40px;
+            border: 0;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id = "div1">
+
+<main id = "main_surf" role = "main">
+
+    <article id = "art_surf">
+        <div id = "div2">
+
+            <div class = "fadein">
+                <img class="imgs"
+                     src = "res/screenshot1.png" alt="no img">
+                <img class="imgs"
+                     src = "res/screenshot2.png" alt = "no img">
+                <img class="imgs"
+                     src = "res/screenshot3.png" alt = "no img">
+                <img class="imgs"
+                     src = "res/screenshot4.png" alt = "no img">
+
+            </div>
+        </div>
+        <div id = "div3">
+            <div class = "div4">
+                <div id="label">
+                </div>
+                <div id="login_tab">
+                    <div id="div5">
+                        <div class = "blocks">
+                            <div class = "block1">
+                                <input id = "email" class = "input_data" type="text" placeholder="Phone number, username, or email">
+
+                            </div>
+
+                        </div>
+                        <div class="blocks">
+                            <div class="block1">
+                                <input id = "password" class = "input_data" type="text" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <div class = "login">
+                            <button disabled type = "submit" id = "button1">Log in</button>
+                        </div>
+
+                        <div id = "or">
+                            <div id = "line">
+                                <div class = "line1"></div>
+                                <div id = "word">OR</div>
+                                <div class = "line1"></div>
+                            </div>
+                        </div>
+                        <div class = "login">
+                            <button id = "button2">
+                                <span id = "fb_logo"></span>
+                                <span id = "fb_login">Log in with Facebook</span>
+                            </button>
+                        </div>
+                        <a id = "forget" href="https://www.instagram.com/accounts/password/reset/">
+                            <span id = "word2">Forgot password?</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "div4" >
+                <span id = "newacc">
+                    <p id = "word3">
+                        Don't have an account?
+                        <a id = "sign-up" href = "https://www.instagram.com/accounts/emailsignup/">
+                            <span>Sign up</span>
+                        </a>
+                    </p>
+                </span>
+            </div>
+            <div id = "div32">
+                <div id = "get">
+                    <span>Get the app.</span>
+                </div>
+                <div id = "app">
+                    <a id = "google" href = "https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3D03BFE8FE-2F77-4401-BF2D-47815EFF2C14%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge&pli=1">
+                        <img class ="pic" src = "https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png">
+                    </a>
+                    <a id = "microsoft" href = "ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C1920%2C1020">
+                        <img class ="pic" src = "https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+</div>
+
+</body>
+</html>
