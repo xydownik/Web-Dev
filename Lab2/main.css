@@ -150,7 +150,7 @@ ul {
     padding: 10px 50px;
 }
 .home_cards {
-
+    overflow: scroll;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
