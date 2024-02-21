@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 
+import {products} from '../products';
 @Component({
-  selector: 'app-product-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  selector:'app-product-list',
+  templateUrl:'./product-list.component.html',
+  styleUrls:['./product-list.component.css']
 })
-export class ProductListComponent {
 
+export class ProductListComponent{
+  products = [...products];
+
+  share(){
+
+  }
+  onNotify(){
+    window.alert('You will be notified when the product goes on sale');
+  }
+
+  protected readonly onclick = onclick;
 }
