@@ -1,0 +1,22 @@
+<div class="catalogue" *ngFor = "let product of products">
+  <h3>
+    <a [title] = "product.name + ' details'"
+       href = "{{product.link}}">
+      {{product.name}}
+    </a>
+  </h3>
+
+  <div class="image-path" >
+    <div class="gallery" *ngFor="let images of product.image">
+      <img class="product-img" src="{{images}}" alt="product image">
+    </div>
+  </div>
+  <p *ngIf="product.description">
+    Description: {{product.description}}
+  </p>
+  <p>Price: {{product.price + 'тг.'}}</p>
+
+  <button type="button" (click)="share(product.id)">
+    Share
+  </button>
+</div>
