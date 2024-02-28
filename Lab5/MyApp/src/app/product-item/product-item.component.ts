@@ -5,10 +5,6 @@ import {CommonModule} from "@angular/common";
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  standalone: true,
-  imports:[
-    CommonModule
-  ],
   styleUrl: './product-item.component.css'
 })
 export class ProductItemComponent {

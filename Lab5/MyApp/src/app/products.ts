@@ -6,6 +6,7 @@ export interface Product{
   description: string;
   link: string;
   rating: number;
+  likes: number
 }
 
 export const products = [

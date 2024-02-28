@@ -13,10 +13,9 @@ import {ProductItemComponent} from "./product-item/product-item.component";
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: '', component: ProductListComponent},
+      {path: '', component: ProductItemComponent},
     ]),
     RouterOutlet,
-    ProductItemComponent
   ],
   declarations: [
     AppComponent,
