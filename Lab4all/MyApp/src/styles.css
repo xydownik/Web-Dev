@@ -12,8 +12,8 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    justify-items: stretch;
 }
 
 router-outlet + * {
@@ -132,25 +132,56 @@ app-top-bar h1{
 }
 
 .product-img{
-
-    margin: 12px;
-    max-height: 120px;
-    max-width: 128px;
+    align-self: center;
+    margin-right: 100px;
+    margin-left: 100px;
+  horiz-align: center;
+    max-height: 200px;
+    max-width: 200px;
 }
 .image-path{
     display: flex;
     overflow-x: scroll;
     padding: 12px;
     background-color: white;
-}
-.catalogue{
-    width: 400px;
-    display: block;
-    background-color: antiquewhite;
-    padding: 12px;
-    margin-bottom: 12px;
 
 }
 .gallery{
-    display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
 }
+.catalogue{
+    background-color: lightblue;
+    padding: 12px;
+    margin-bottom: 12px;
+  border-radius: 16px;
+}
+div{
+  border-radius: 16px;
+}
+.all_products{
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .all_products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 499px) {
+  .all_products{
+    grid-template-columns: 1fr;
+  }
+}
+
