@@ -1,5 +1,21 @@
-<app-top-bar></app-top-bar>
+
+<div class="categoryrow">
+  <div *ngFor="let category of categories">
+    <h3>
+      <a
+        [title]="category.name + ' details'"
+        (click)="sortByCategory(+category.id)"
+      >
+        {{ category.name }}
+      </a>
+    </h3>
+  </div>
+
+
+
+</div>
+
 
 <div class="container">
-  <router-outlet></router-outlet>
+  <app-product-list *ngIf="productList" [curProducts]="productList"></app-product-list>
 </div>

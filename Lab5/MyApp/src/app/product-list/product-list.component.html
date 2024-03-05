@@ -1,5 +1,7 @@
-<section class="catalogue">
-  <app-product *ngFor="let product of productsList"
-               [product]="product" (remove)="removeChild($event)">
-  </app-product>
-</section>
+
+  <section class="all_products" *ngFor="let product of curProducts">
+    <app-product-item
+      [product]="product" (remove)="delete($event)">
+    </app-product-item>
+  </section>
+

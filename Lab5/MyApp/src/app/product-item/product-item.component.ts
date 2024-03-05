@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product, products} from '../products';
 import {AppModule} from "../app.module";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgForOf} from "@angular/common";
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
+  standalone: true,
+  imports: [
+    NgForOf
+  ],
   styleUrl: './product-item.component.css'
 })
 export class ProductItemComponent {
@@ -20,4 +24,13 @@ export class ProductItemComponent {
   }
 
   protected readonly onclick = onclick;
+  @Input() product!: Product;
+  @Output() remove = new EventEmitter<Product>();
+
+  putLike() {
+    this.product.likes ++;
+  }
+  onRemove() {
+    this.remove.emit(this.product);
+  }
 }

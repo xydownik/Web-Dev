@@ -1,0 +1,33 @@
+.product-img{
+  align-self: center;
+  margin-right: 100px;
+  margin-left: 100px;
+  horiz-align: center;
+  max-height: 200px;
+  max-width: 200px;
+}
+.image-path{
+  display: flex;
+  overflow-x: scroll;
+  padding: 12px;
+  background-color: white;
+
+}
+.gallery{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+}
+.catalogue{
+  background-color: lightblue;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+}
+div{
+  border-radius: 16px;
+}
+.likes{
+  cursor: pointer;
+}
