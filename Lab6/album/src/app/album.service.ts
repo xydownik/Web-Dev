@@ -31,6 +31,11 @@ export class AlbumService implements OnInit{
   updateAlbum(album: Album) {
     AlbumsComponent.constAlbums[+album.id - 1] = album
   }
+  deleteAlbum(albumId:number){
+      return this.httpClient.delete<void>(`${this.BASE_URl}/${albumId}`);
+
+
+  }
 
 
 }

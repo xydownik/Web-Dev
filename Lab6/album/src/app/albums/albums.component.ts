@@ -32,4 +32,12 @@ export class AlbumsComponent implements OnInit{
       }
     })
   }
+  deleteAlbum(id:number){
+    this.albumService.deleteAlbum(id)
+      .subscribe(() => {
+        // Remove the deleted album from the local array
+        AlbumsComponent.constAlbums = this.albums.filter(album => album.id !== id);
+      });
+    this.getAlbums()
+  }
 }

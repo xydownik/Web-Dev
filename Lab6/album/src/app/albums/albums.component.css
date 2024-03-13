@@ -10,3 +10,12 @@ li{
   padding: 3px;
   border-radius: 6px;
 }
+.delete-button{
+  margin-left: 20px;
+  background-color: lightblue;
+  border: none;
+}
+.delete-button:hover{
+  border: solid indianred 1px;
+  background-color: lightcyan;
+}
