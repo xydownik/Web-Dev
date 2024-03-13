@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Album, Photos} from "../models";
 import {AlbumService} from "../album.service";
+import {async} from "rxjs";
 
 @Component({
   selector: 'app-albums',
@@ -9,7 +10,8 @@ import {AlbumService} from "../album.service";
 })
 export class AlbumsComponent implements OnInit{
 
-  albums: Album[];
+  static constAlbums: Album[] = []
+  albums!: Album[];
   photos: Photos[];
   constructor(private albumService:AlbumService) {
     this.albums = []
@@ -19,6 +21,15 @@ export class AlbumsComponent implements OnInit{
     this.getAlbums()
   }
   getAlbums(){
-    this.albumService.getAlbums().subscribe((albums) => {this.albums = albums})
+    if(AlbumsComponent.constAlbums.length) {
+      this.albums = AlbumsComponent.constAlbums
+      return
+    }
+    this.albumService.getAlbums().subscribe(albums => {
+      this.albums = albums
+      if(!AlbumsComponent.constAlbums.length) {
+        AlbumsComponent.constAlbums = this.albums
+      }
+    })
   }
 }
