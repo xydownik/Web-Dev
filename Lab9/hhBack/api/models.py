@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Company(models.Model):
     name = models.CharField(max_length=255)
     address = models.TextField(max_length=255)
@@ -8,7 +9,7 @@ class Company(models.Model):
     description = models.TextField(max_length=255)
 
     def __str__(self):
-        return f"ID:{self.id}, name: {self.name}, address: {self.address}, city: {self}"
+        return f"ID:{self.id}, name: {self.name}"
 
     def to_json(self):
         return {
@@ -21,8 +22,8 @@ class Company(models.Model):
         }
 
     class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
+        verbose_name = "Company"
+        verbose_name_plural = "Companies"
 
 
 class Vacancy(models.Model):
@@ -32,7 +33,7 @@ class Vacancy(models.Model):
     salary = models.FloatField()
 
     def __str__(self):
-        return f"ID:{self.id}, name: {self.name}, description: {self.description}, salary: {self.salary}, company: {self.company} "
+        return f"ID:{self.id}, name: {self.name}"
 
     def to_json(self):
         return {
@@ -42,3 +43,7 @@ class Vacancy(models.Model):
             "description": self.description,
             "salary": self.salary
         }
+
+    class Meta:
+        verbose_name = "Vacancy"
+        verbose_name_plural = "Vacancies"

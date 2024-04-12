@@ -1,8 +1,10 @@
 import json
 from django.http import JsonResponse
 from .models import Company, Vacancy
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def company_list(request):
     if request.method == 'GET':
         companies = Company.objects.all()
@@ -10,11 +12,12 @@ def company_list(request):
         return JsonResponse(companies_json, safe=False)
     elif request.method == 'POST':
         data = json.loads(request.body)
-        company = Company.objects.create(name=data['name'], address=data['address'], city=data['city'], description=data['description'])
+        company = Company.objects.create(name=data['name'], address=data['address'], city=data['city'],
+                                         description=data['description'])
         return JsonResponse(company.to_json())
 
 
-
+@csrf_exempt
 def vacancy_list(request):
     if request.method == 'GET':
         vacancies = Vacancy.objects.all()
@@ -22,13 +25,15 @@ def vacancy_list(request):
         return JsonResponse(vacancies_json, safe=False)
     elif request.method == 'POST':
         data = json.loads(request.body)
-        vacancy = Vacancy.objects.create(name=data['name'], company=data['company'], description=data['description'], salary=data['salary'])
+        vacancy = Vacancy.objects.create(name=data['name'], company=data['company'], description=data['description'],
+                                         salary=data['salary'])
         return JsonResponse(vacancy.to_json())
 
 
-def company_detail(request, company_id):
+@csrf_exempt
+def company_detail(request, id):
     try:
-        company = Company.objects.get(id = company_id)
+        company = Company.objects.get(id=id)
     except Company.DoesNotExist as e:
         return JsonResponse({"error": str(e)})
 
@@ -45,9 +50,10 @@ def company_detail(request, company_id):
     elif request.method == 'DELETE':
         company.delete()
         return JsonResponse({"deleted": True})
-    return JsonResponse({"id": company_id})
+    return JsonResponse({"id": id})
 
 
+@csrf_exempt
 def vacancy_detail(request, vacancy_id):
     try:
         vacancy = Vacancy.objects.get(id=vacancy_id)
