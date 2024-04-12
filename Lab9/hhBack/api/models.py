@@ -8,7 +8,21 @@ class Company(models.Model):
     description = models.TextField(max_length=255)
 
     def __str__(self):
-        return self.name
+        return f"ID:{self.id}, name: {self.name}, address: {self.address}, city: {self}"
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "address": self.address,
+            "city": self.city,
+            "description": self.description
+
+        }
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
 
 class Vacancy(models.Model):
@@ -18,4 +32,13 @@ class Vacancy(models.Model):
     salary = models.FloatField()
 
     def __str__(self):
-        return self.name
+        return f"ID:{self.id}, name: {self.name}, description: {self.description}, salary: {self.salary}, company: {self.company} "
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "company": self.company.name,
+            "description": self.description,
+            "salary": self.salary
+        }
