@@ -1,0 +1,14 @@
+<section class="listing">
+  <img class="listing-photo" [src]="PHOTO_LINK+movie.posterPath" alt="Poster of {{movie.title}}">
+  <h2 class="listing-heading">{{ movie.title}}</h2>
+  <p class="listing-location">{{ movieInfo.Genre}}</p>
+
+    <p class="listing-location">⭐{{ movie.voteAverage}}</p>
+
+  <a [routerLink]="['/movies', movie.title]">Learn More...</a>
+  <div class="div1">
+  <button class="add" (click)="toggleFavorite(movie)">
+  {{ movieService.isInFavorites(movie) ? '✖️ unsave' : '➕ save' }}
+  </button>
+</div>
+</section>

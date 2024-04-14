@@ -1,0 +1,9 @@
+<section class="results" *ngIf="myMovies.length">
+<app-movie-item *ngFor="let movie of myMovies"
+  [movie]="movie" (removeFromFavorites)="removeFromFavorites(movie)">
+</app-movie-item>
+</section>
+<section class="no_saved" *ngIf="!myMovies.length">
+  <h1>￣\_(ツ)_/￣ You don't have saved films yet...</h1>
+  <button [routerLink]="['/movies']">Search for films</button>
+</section>

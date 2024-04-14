@@ -1,0 +1,59 @@
+.results {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  justify-content: space-around;
+  background-color: black;
+  padding: 56px 36px 36px 36px;
+  margin: 0;
+}
+form{
+  background-color: black;
+
+}
+input[type="text"]{
+  border-bottom: solid 1px lightblue;
+  border-left: none;
+  border-top:none ;
+  border-right: none;
+  padding: 15px;
+  margin-right: 20px;
+  width: 60%;
+  background-color: black;
+  outline: none;
+  font-style: italic;
+  font-weight: lighter;
+  color: orange;
+  font-size: 16px;
+}
+input::placeholder{
+  color:lightblue ;
+
+}
+
+ .saved_btn{
+  text-align: right;
+}
+ .search{
+   margin-left: 36px;
+   width: 50%;
+ }
+.logo img{
+  height: 100px;
+  margin: 12px 12px 12px 36px;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+h2{
+  color: whitesmoke;
+}
+.load{
+  margin: 20px ;
+}
+
+
