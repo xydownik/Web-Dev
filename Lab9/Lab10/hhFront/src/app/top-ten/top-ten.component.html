@@ -1,0 +1,15 @@
+<div *ngIf="topTen.length">
+  <div class="container" *ngFor="let vacancy of topTen" >
+    <div class="item">
+      <h1>Vacancy: {{vacancy.name}}</h1>
+      <h3>Monthly salary: {{vacancy.salary}}</h3>
+      <hr>
+      <h3>Description:</h3>
+      <h3>{{vacancy.description}}</h3>
+    </div>
+  </div>
+</div>
+<div *ngIf="!topTen.length">
+  <p>No vacancies yet</p>
+</div>
+

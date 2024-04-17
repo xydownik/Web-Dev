@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  background-color: midnightblue;
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 60%;
+  margin: 36px 0 36px 36px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px;
+}
+p{
+  text-align: center;
+  color: white;
+  font-size: 70px;
+}
